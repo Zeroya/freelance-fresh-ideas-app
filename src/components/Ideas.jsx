@@ -24,7 +24,7 @@ const Ideas = (props) => {
     } else {
       const data = await fetch(`https://www.boredapi.com/api/activity/`);
       const detailData = await data.json();
-      if (ideas.length < changeItem + 1) {
+      if (ideas.length <= changeItem + 1) {
         setIdeas([...ideas, { detailData }]);
           console.log(ideas);
       }
