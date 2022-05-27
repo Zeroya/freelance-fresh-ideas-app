@@ -14,7 +14,6 @@ const Ideas = (props) => {
 
   const [changeItem, setChangeItem] = useState(7);
 
-  console.log(ideas);
   
   const fetchDetails = async () => {
 
@@ -25,9 +24,11 @@ const Ideas = (props) => {
     } else {
       const data = await fetch(`https://www.boredapi.com/api/activity/`);
       const detailData = await data.json();
-      if (ideas.length < changeItem) {
+      if (ideas.length <= changeItem) {
         setIdeas([...ideas, { detailData }]);
+          console.log(ideas);
       }
+        console.log(11111, ideas);
       localStorage.setItem("cardsUpAmount", JSON.stringify(ideas));
     }
   }
