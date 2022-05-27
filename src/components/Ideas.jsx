@@ -19,7 +19,7 @@ const Ideas = (props) => {
 
     const check = localStorage.getItem('cardsUpAmount');
 
-    if (check && changeItem < ideas.length) {
+    if (check && changeItem === JSON.parse(check).length - 1) {
       setIdeas(JSON.parse(check));
     } else {
       const data = await fetch(`https://www.boredapi.com/api/activity/`);
