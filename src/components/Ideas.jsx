@@ -14,7 +14,7 @@ const Ideas = (props) => {
 
   const [changeItem, setChangeItem] = useState(7);
 
-  console.log(slideIdeas);
+  console.log(ideas);
   
   const fetchDetails = async () => {
 
