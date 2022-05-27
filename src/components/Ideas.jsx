@@ -23,7 +23,7 @@ const Ideas = (props) => {
     if (check && changeItem === ideas.length) {
       setIdeas(JSON.parse(check));
     } else {
-      const data = await fetch(`http://www.boredapi.com/api/activity/`);
+      const data = await fetch(`https://www.boredapi.com/api/activity/`);
       const detailData = await data.json();
       if (ideas.length <= changeItem) {
         setIdeas([...ideas, { detailData }]);
