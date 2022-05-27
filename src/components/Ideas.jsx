@@ -55,10 +55,8 @@ const Ideas = (props) => {
     const exist = slideIdeas.find((x) => x.detailData.key === card.detailData.key);
     if (exist) {
       setslideIdeas([...slideIdeas]);
-      localStorage.setItem("cardsSlider", JSON.stringify(slideIdeas));
     } else {
       setslideIdeas([...slideIdeas, { ...card }]);
-      localStorage.setItem("cardsSlider", JSON.stringify(slideIdeas));
     }
 
   }
